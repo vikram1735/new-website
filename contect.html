@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f1e7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #5a3e2b;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #5a3e2b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #754f39;
+        }
+
+        .info-box {
+            margin-top: 30px;
+            background: #f0ebe1;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .info-box p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .info-box strong {
+            color: #5a3e2b;
+        }
+.back-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.back-btn:hover {
+  background: #ffe601;
+}
+
+    </style>
+</head>
+<body>
+<a href="javascript:history.back()" class="back-btn">← Back</a>
+<div class="container">
+    <h2>Contact Us</h2>
+
+    <!-- Contact Form -->
+    <form>
+        <label>Your Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Your Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Your Phone Number</label>
+        <input type="text" placeholder="Enter your phone number" required>
+
+        <label>Your Message</label>
+        <textarea rows="4" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Business Info -->
+    <div class="info-box">
+        <h3 style="color:#5a3e2b;">Our Shop Information</h3>
+        <p><strong>Shop Name:</strong> WPC Wood Furniture Works</p>
+        <p><strong>Address:</strong> Your Shop Address Here</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> shopemail@example.com</p>
+        <p><strong>Working Hours:</strong> 9:00 AM – 7:00 PM</p>
+    </div>
+
+</div>
+
+</body>
+</html>

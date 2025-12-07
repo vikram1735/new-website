@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAi MAA BHAGWATI STORE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f8f1e7;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #f39c12;
+    }
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+    .products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      width: 220px;
+      box-shadow: 0 0 5px gray;
+      border-radius: 8px;
+    }
+    .product img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>JAi MAA BHAGWATI STORE</h1>
+    <p>Quality Beds, Doors, Frames, and Windows</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="contect.html">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Our Shop</h2>
+    <p>We specialize in WPC wood furniture including beds, doors, frames, and windows.</p>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="test.jpg" alt="wpc bed">
+        <h3><a href="bed.html">Wooden Bed</a></h3>
+        <p>Stylish & durable WPC wood beds.</p>
+      </div>
+      <div class="product">
+        <img src="door.jpg"alt="Door">
+        <h3><a href="door.html">Doors</a></h3>
+        <p>Strong and elegant wooden doors.</p>
+      </div>
+      <div class="product">
+        <img src="doorframe.jpg" alt="Door Frame">
+        <h3><a href="doorframe.html">Door Frames</a></h3>
+        <p>Perfectly designed WPC door frames.</p>
+      </div>
+      <div class="product">
+        <img src="window.jpg" alt="Window">
+        <h3><a href="window.html">Windows</a></h3>
+        <p>Modern & classic style windows.</p>
+      </div>
+    </div>
+  </section>
+
+ <section id="about">
+    <h2>About Us</h2>
+    <p>We are a trusted manufacturer of eco-friendly WPC wood furniture. 
+       Our products are durable, stylish, and sustainable.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@wpcshop.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Address: Main Market, New Delhi , India</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 JAi MAA BHAGWATI STORE. All rights reserved.</p>
+  </footer>
+</body>
+</html>

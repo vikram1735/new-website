@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WPC Order Form</title>
+
+<style>
+body {
+    font-family: Arial;
+    background-color: #f8f1e7;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #5a3e2b;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #5a3e2b;
+    color: white;
+    font-size: 18px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #754f39;
+}
+</style>
+</head>
+
+<body>
+<a href="javascript:history.back()" class="back-btn">← Back</a>
+<div class="container">
+<h2>WPC Purchase Order Form</h2>
+
+<form>
+
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Phone Number</label>
+<input type="text" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Full Address</label>
+<textarea required></textarea>
+
+<label>Select Category</label>
+<select id="category" onchange="loadItems()" required>
+  <option value="">-- Select Category --</option>
+  <option value="bed">Beds</option>
+  <option value="door">Doors</option>
+  <option value="frame">Door Frames</option>
+  <option value="window">Windows</option>
+</select>
+
+<label>Select Product Type</label>
+<select id="item" required>
+  <option value="">-- Select Item --</option>
+</select>
+
+<label>Quantity</label>
+<input type="number" min="1" value="1" required>
+
+<label>Additional Instructions</label>
+<textarea placeholder="Colour, size, customization..."></textarea>
+
+<button type="submit">Place Order</button>
+
+</form>
+</div>
+
+<script>
+function loadItems() {
+  var category = document.getElementById("category").value;
+  var item = document.getElementById("item");
+
+  item.innerHTML = "<option value=''>-- Select Item --</option>";
+
+  if (category == "bed") {
+    item.innerHTML += "<option>Single Bed</option>";
+    item.innerHTML += "<option>Double Bed</option>";
+    item.innerHTML += "<option>King Size Bed</option>";
+  } 
+  else if (category == "door") {
+    item.innerHTML += "<option>Classic Door</option>";
+    item.innerHTML += "<option>Double Door</option>";
+    item.innerHTML += "<option>Modern Door</option>";
+  }
+  else if (category == "frame") {
+    item.innerHTML += "<option>Classic Frame</option>";
+    item.innerHTML += "<option>Double Frame</option>";
+    item.innerHTML += "<option>Modern Frame</option>";
+  }
+  else if (category == "window") {
+    item.innerHTML += "<option>Classic Window</option>";
+    item.innerHTML += "<option>Double Window</option>";
+    item.innerHTML += "<option>Modern Window</option>";
+  }
+}
+</script>
+
+</body>
+</html>
+  
+
+
+
+
+
+
+
+
+  item.innerHTML = "<option value=''>-- Select Product Type --</option>";
+   if (category === "Single Bed") {
+        item.innerHTML += "<option>Single Bed</option>";
+        item.innerHTML += "<option>Double Bed</option>";
+        item.innerHTML += "<option>King Size Bed</option>";
+      } 
+ else if (category === "Double Bed") {
+    item.innerHTML += "<option>Classic Door</option>";
+    item.innerHTML += "<option>Double Door</option>";
+    item.innerHTML += "<option>Modern Door</option>";
+  } 
+  else if (category === "King Size Bed") {
+    item.innerHTML += "<option>Classic Frame</option>";
+    item.innerHTML += "<option>Double Frame</option>";
+    item.innerHTML += "<option>Modern Frame</option>";
+  } 
+  else if (category === "Classic Door") {
+    item.innerHTML += "<option>Classic Window</option>";
+    item.innerHTML += "<option>Double Window</option>";
+    item.innerHTML += "<option>Modern Window</option>";
+  }
+}

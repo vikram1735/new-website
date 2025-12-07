@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purchase Order Form</title>
+
+<style>
+body {
+    font-family: Arial;
+    background-color: #f8f1e7;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #5a3e2b;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #5a3e2b;
+    color: white;
+    font-size: 18px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #754f39;
+}
+</style>
+
+<script>
+function loadItems() {
+  var category = document.getElementById("category").value;
+  var item = document.getElementById("item");
+
+  item.innerHTML = "<option value=''>-- Select Product Type --</option>";
+
+  if (category === "Single Bed") {
+    item.innerHTML += "<option>Single plain Bed</option>";
+    item.innerHTML += "<option>Single Bed with storage</option>";
+    item.innerHTML += "<option>Single CNC-Design Bed</option>";
+    item.innerHTML += "<option>Single Hydraulic Style Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  } 
+  else if (category === "Double Bed") {
+    item.innerHTML += "<option>Classic Door</option>";
+    item.innerHTML += "<option>Double Door</option>";
+    item.innerHTML += "<option>Modern Door</option>";
+    item.innerHTML += "<option>Double Bed</option>";
+    item.innerHTML += "<option>King Size Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  } 
+  else if (category === "King Size Bed") {
+    item.innerHTML += "<option>Classic Frame</option>";
+    item.innerHTML += "<option>Double Frame</option>";
+    item.innerHTML += "<option>Modern Frame</option>";
+    item.innerHTML += "<option>Double Bed</option>";
+    item.innerHTML += "<option>King Size Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  } 
+  else if (category === "Single Door") {
+    item.innerHTML += "<option>Classic Window</option>";
+    item.innerHTML += "<option>Double Window</option>";
+    item.innerHTML += "<option>Modern Window</option>";
+    item.innerHTML += "<option>Double Bed</option>";
+    item.innerHTML += "<option>King Size Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  }
+ else if (category === "Double Door") {
+    item.innerHTML += "<option>Classic Door</option>";
+    item.innerHTML += "<option>Double Door</option>";
+    item.innerHTML += "<option>Modern Door</option>";
+    item.innerHTML += "<option>Double Bed</option>";
+    item.innerHTML += "<option>King Size Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  } 
+  else if (category === "Modern Door") {
+    item.innerHTML += "<option>Classic Frame</option>";
+    item.innerHTML += "<option>Double Frame</option>";
+    item.innerHTML += "<option>Modern Frame</option>";
+    item.innerHTML += "<option>Double Bed</option>";
+    item.innerHTML += "<option>King Size Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  } 
+  else if (category === "Classic Window") {
+    item.innerHTML += "<option>Classic Window</option>";
+    item.innerHTML += "<option>Double Window</option>";
+    item.innerHTML += "<option>Modern Window</option>";
+    item.innerHTML += "<option>Double Bed</option>";
+    item.innerHTML += "<option>King Size Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  }
+if (category === "Modern Window") {
+    item.innerHTML += "<option>Single plain Bed</option>";
+    item.innerHTML += "<option>Single Bed with storage</option>";
+    item.innerHTML += "<option>Single CNC-Design Bed</option>";
+    item.innerHTML += "<option>Single Hydraulic Style Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  } 
+  else if (category === "Double Window") {
+    item.innerHTML += "<option>Classic Door</option>";
+    item.innerHTML += "<option>Double Door</option>";
+    item.innerHTML += "<option>Modern Door</option>";
+    item.innerHTML += "<option>Double Bed</option>";
+    item.innerHTML += "<option>King Size Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  } 
+  else if (category === "Classic DoorFrame") {
+    item.innerHTML += "<option>Classic Frame</option>";
+    item.innerHTML += "<option>Double Frame</option>";
+    item.innerHTML += "<option>Modern Frame</option>";
+    item.innerHTML += "<option>Double Bed</option>";
+    item.innerHTML += "<option>King Size Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  } 
+  else if (category === "Modern DoorFrame") {
+    item.innerHTML += "<option>Classic Window</option>";
+    item.innerHTML += "<option>Double Window</option>";
+    item.innerHTML += "<option>Modern Window</option>";
+    item.innerHTML += "<option>Double Bed</option>";
+    item.innerHTML += "<option>King Size Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  }
+ else if (category === "Double DoorFrame") {
+    item.innerHTML += "<option>Classic Door</option>";
+    item.innerHTML += "<option>Double Door</option>";
+    item.innerHTML += "<option>Modern Door</option>";
+    item.innerHTML += "<option>Double Bed</option>";
+    item.innerHTML += "<option>King Size Bed</option>";
+    item.innerHTML += "<option>Single Minimal Style Bed</option>";
+  } 
+
+}
+
+function showAlert() {
+  alert("Your order is submitted successfully!");
+  return true;
+}
+.back-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.back-btn:hover {
+  background: #ffe601;
+}
+
+</script>
+
+</head>
+<body>
+<a href="javascript:history.back()" class="back-btn">← Back</a>
+<div class="container">
+<h2>Purchase Order Form</h2>
+
+<form onsubmit="return showAlert()">
+
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Phone Number</label>
+<input type="text" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Full Address</label>
+<textarea required></textarea>
+
+<label>Select Category</label>
+<select id="category" onchange="loadItems()" required>
+    <option value="">-- Choose Category --</option>
+    <optgroup label="Beds">
+    <option>Single Bed</option>
+    <option>Double Bed</option>
+    <option>King Size Bed</option>
+  </optgroup>
+    <optgroup label="Doors">
+    <option>Single Door</option>
+    <option>Double Door</option>
+    <option>Modern Door</option>
+  </optgroup>
+    <optgroup label="Frames">
+    <option>Single DoorFrame</option>
+    <option>Double DoorFrame</option>
+  <option>Bathroom DoorFrame</option>
+  </optgroup>
+   <optgroup label="Windows">
+    <option>Single Window</option>
+    <option>Double Window</option>
+  <option>Modern Window</option>
+  </optgroup>
+</select>
+
+<label>Select Product Type</label>
+<select id="item" required>
+    <option value="">-- Select Product Type --</option>
+</select>
+
+<label>Quantity</label>
+<input type="number" min="1" value="1" required>
+
+<label>Additional Instructions</label>
+<textarea placeholder="Color, design, size, etc. (Optional)"></textarea>
+
+<button type="submit">Place Order</button>
+
+</form>
+</div>
+
+</body>
+</html>
